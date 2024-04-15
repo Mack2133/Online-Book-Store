@@ -10,16 +10,16 @@ const app = express();
 app.use(express.json());
 
 // method 1 for cors
-// app.use(cors());
+app.use(cors());
 
 // method 2 for cors
-app.use(cors(
-    {
-        origin: "https://book-collection-api.vercel.app/",
-        methods: ["GET, POST, PUT, DELETE"],
-        credentials: true
-    }
-))
+// app.use(cors(
+//     {
+//         origin: "https://book-collection-api.vercel.app/",
+//         methods: ["GET, POST, PUT, DELETE"],
+//         credentials: true
+//     }
+// ))
 
 app.get('/', (req, res) => {
     // console.log(req);
