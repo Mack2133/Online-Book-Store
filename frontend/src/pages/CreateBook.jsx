@@ -12,6 +12,13 @@ const CreateBook = () => {
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isNaN(publishedYear)) {
+      setError('Published year must be a number');
+      return;
+    }
+
     const book = {
       title,
       author,
