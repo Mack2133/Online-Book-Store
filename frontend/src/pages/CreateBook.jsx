@@ -54,6 +54,7 @@ const CreateBook = () => {
         <div className="my-4">
           <label htmlFor="publishedYear" className="text-xl mr-4 text-gray-800">Published Year: </label>
           <input type="text" required id="publishedYear" className="text-xl ring-1 ring-gray-300 rounded-sm" value={publishedYear} onChange={(e) => setPublishedYear(e.target.value)} />
+          {error && <p className="text-red-500">{error}</p>}
         </div>
         <button onClick={handleSubmit} className="bg-green-500 text-white px-4 py-2 rounded-md">Create</button>
     </div>
