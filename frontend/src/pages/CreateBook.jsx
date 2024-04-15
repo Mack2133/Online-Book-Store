@@ -9,6 +9,7 @@ const CreateBook = () => {
   const [author, setAuthor] = useState('')
   const [publishedYear, setPublishedYear] = useState('')
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
