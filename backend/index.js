@@ -13,13 +13,13 @@ app.use(express.json());
 app.use(cors());
 
 // method 2 for cors
-// app.use(cors(
-//     {
-//         origin: "localhost:3000",
-//         methods: ["GET, POST, PUT, DELETE"],
-//         allowedHeaders: ["Content-Type"]
-//     }
-// ))
+app.use(cors(
+    {
+        origin: "https://book-collection-eight.vercel.app/",
+        methods: ["GET, POST, PUT, DELETE"],
+        credentials: true
+    }
+))
 
 app.get('/', (req, res) => {
     // console.log(req);
