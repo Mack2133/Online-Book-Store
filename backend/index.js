@@ -25,7 +25,7 @@ app.use(cors());
 //     }
 // ))
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     // console.log(req);
     return res.status(200).send('Hello World');
 })
