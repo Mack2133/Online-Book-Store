@@ -3,6 +3,10 @@ import { PORT, MONGODB_URI } from './config.js';
 import mongoose from 'mongoose';
 import bookRoute from './routes/booksRoute.js';
 import cors from 'cors';
+import * as dotenv from 'dotenv'
+// require('dotenv').config({ path: `${__dirname}/../.env` })
+
+// dotenv.config();
 
 const app = express();
 
@@ -21,7 +25,7 @@ app.use(cors());
 //     }
 // ))
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     // console.log(req);
     return res.status(200).send('Hello World');
 })

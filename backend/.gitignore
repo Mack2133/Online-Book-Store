@@ -1,1 +1,8 @@
 node_modules/
+
+
+# Logs
+.env
+.env*
+config.js
+.vercel
